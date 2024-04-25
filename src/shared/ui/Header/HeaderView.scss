@@ -1,0 +1,47 @@
+@import '/src/styles/helpers/_mixins.scss';
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rem 42rem 65rem 32rem;
+  gap: 32rem;
+  @include mobile {
+    flex-direction: column-reverse;
+    gap: 20rem;
+  }
+  &-logo {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
+  &-link {
+    font-weight: 500;
+    font-size: 16rem;
+    line-height: 112%;
+    text-decoration: none;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    cursor: pointer;
+  }
+
+  .user-img {
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+  }
+
+  &-group {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+
+    @include mobile {
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+}

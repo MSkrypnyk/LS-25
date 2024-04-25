@@ -1,0 +1,90 @@
+@import "/src/styles/helpers/_mixins.scss";
+.sidebar {
+  padding: 40rem;
+  background: var(--bg-sidebar);
+  height: 100%;
+  min-width: 274rem;
+  box-shadow: 2rem 0rem 90rem rgba(97, 0, 194, 0.4);
+  transition: 0.2s all ease-in-out;
+  position: fixed;
+  z-index: 99;
+  overflow-y: auto;
+
+  @include mobile {
+    transition: 0.2s all ease-in-out;
+    width: 100%;
+    height: 55rem;
+    box-shadow: 1rem 0rem 10rem rgba(97, 0, 194, 0.4);
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  &-pages {
+    display: flex;
+    flex-direction: column;
+    gap: 35rem;
+    padding-top: 58rem;
+    @include mobile {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10rem;
+      position: absolute;
+      top: -50rem;
+    }
+    & span {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 150%;
+    opacity: 0.8;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .mb {
+    margin-bottom: 257rem;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  .mb-small {
+    margin-bottom: 122rem;
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  .is-active {
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 150%;
+    color: var(--white);
+  }
+
+  .logo {
+    @include mobile {
+      display: none;
+    }
+  }
+  &-icon path {
+    color: var(--white);
+    opacity: 0.8;
+  }
+
+  .is-active &-icon path {
+    opacity: 1;
+  }
+}
