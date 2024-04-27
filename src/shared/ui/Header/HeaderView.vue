@@ -1,20 +1,3 @@
-<script>
-import SearchIcon from '@/components/icons/header/SearchIcon.vue'
-import BellIcon from '@/components/icons/header/BellIcon.vue'
-
-export default {
-  methods: {
-    isActive(route) {
-      return this.$route.path === route
-    }
-  },
-  components: {
-    SearchIcon,
-    BellIcon,
-  }
-}
-</script>
-
 <template>
   <div class="header">
     <router-link class="header-link" to="/">Movies</router-link>
@@ -33,3 +16,22 @@ export default {
     </router-link>
   </div>
 </template>
+<script>
+
+import SearchIcon from '@/components/icons/header/SearchIcon.vue'
+import BellIcon from '@/components/icons/header/BellIcon.vue'
+import LogoIcon from '@/components/icons/logo/LogoIcon.vue'
+
+export default {
+  methods: {
+    isActive(route) {
+      return this.$route.path === route
+    }
+  },
+  components: {
+    SearchIcon,
+    BellIcon,
+    LogoIcon
+  }
+}
+</script>

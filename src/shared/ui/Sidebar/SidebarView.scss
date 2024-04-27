@@ -1,4 +1,4 @@
-@import "/src/styles/helpers/_mixins.scss";
+@import '/src/styles/helpers/_mixins.scss';
 .sidebar {
   padding: 40rem;
   background: var(--bg-sidebar);
@@ -8,17 +8,12 @@
   transition: 0.2s all ease-in-out;
   position: fixed;
   z-index: 99;
-  overflow-y: auto;
-
   @include mobile {
     transition: 0.2s all ease-in-out;
     width: 100%;
-    height: 55rem;
-    box-shadow: 1rem 0rem 10rem rgba(97, 0, 194, 0.4);
+    height: 50rem;
+    box-shadow: 1rem 0rem 45rem rgba(97, 0, 194, 0.4);
     padding: 0rem;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
   }
 
   &-pages {
@@ -30,9 +25,10 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      gap: 10rem;
-      position: absolute;
-      top: -50rem;
+      align-items: center;
+      padding: 10rem;
+      padding-top: 10rem;
+      gap: 17rem;
     }
     & span {
       @include mobile {
@@ -51,20 +47,6 @@
     line-height: 150%;
     opacity: 0.8;
     transition: 0.2s all ease-in-out;
-  }
-
-  .mb {
-    margin-bottom: 257rem;
-    @include mobile {
-      margin-bottom: 0;
-    }
-  }
-
-  .mb-small {
-    margin-bottom: 122rem;
-    @include mobile {
-      margin-bottom: 0;
-    }
   }
 
   .is-active {

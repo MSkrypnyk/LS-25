@@ -1,6 +1,6 @@
 <template>
   <svg
-    :class="className"
+    :class="classIcon"
     width="24"
     height="24"
     viewBox="0 0 24 24"
@@ -26,7 +26,7 @@
 <script>
 export default {
   props: {
-    className: String
+    classIcon: String
   }
 }
 </script>
